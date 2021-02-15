@@ -28,6 +28,8 @@ def beep():
     winsound.Beep(f,d)
     
 def send(mail):
+    if len(mail)==0:
+        return
     ob=smtplib.SMTP('smtp.gmail.com', 587)
     ob.starttls()
     ob.login("talrejasanjana28@gmail.com","sanjana287")

@@ -68,6 +68,7 @@ t4 = Entry(frame, width=30,font=("Helvetica",10),borderwidth=4,relief=RIDGE,text
 b= Button(frame,height=1,width=10,text="Submit",fg="green",activebackground="green",command=execute)
 c1.pack(side="top",padx=10,pady=5)
 l.pack()
+print(var1.get())
 t1.pack(pady=5)
 c2.pack(side="top",padx=10,pady=5)
 l1.pack()
