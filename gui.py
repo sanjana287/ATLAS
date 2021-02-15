@@ -3,6 +3,11 @@ from _thread import *
 from SocialMedia.Facebook import main as m1
 from SocialMedia.Instagram import main as m2
 from SocialMedia.Twitter import main as m3
+from dotenv import load_dotenv
+import os
+
+## import env variables
+load_dotenv()
 
 
 def execute():
