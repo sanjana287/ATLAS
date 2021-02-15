@@ -5,10 +5,9 @@ from plyer import notification
 
 
 
-sender = 'talrejasanjana28@gmail.com'
+sender = os.getenv('email')
 
-
-message = """From: ATLAS Alert <talrejasanjana28@gmail.com>
+message = """From: ATLAS Alert <sender>
 Subject: Alert- App Used beyond time limit.
 
 This is an auto-generated alert to notify that you have exceeded your daily app usage time limit.
