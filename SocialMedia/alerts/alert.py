@@ -1,4 +1,5 @@
 import smtplib
+import os
 import winsound
 from plyer import notification
 
@@ -30,7 +31,9 @@ def send(mail):
         return
     ob=smtplib.SMTP('smtp.gmail.com', 587)
     ob.starttls()
-    ob.login("talrejasanjana28@gmail.com","sanjana287")
+    email = os.getenv('email')
+    password = os.getenv('password')
+    ob.login(email,password)
     receiver = mail
     ob.sendmail(sender,receiver,message)
     ob.quit()

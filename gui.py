@@ -6,6 +6,10 @@ from SocialMedia.Twitter import main as m3
 
 
 def execute():
+    if var1.get()==0 and var2.get()==0 and var3.get()==0:
+        l=Label(frame, text="Nothing has been selected-select atleast one website!", font=("Helvetica",15),bg="black",fg="red")
+        l.pack()
+        return
     email=s4.get()
     if var1.get():
         time=s1.get()
@@ -21,7 +25,7 @@ def execute():
         start_new_thread(m3,(time,email))
     print(var1.get(),var2.get(),var3.get())
     print(s1.get(),s2.get(),s3.get(),s4.get())
-    l=Label(frame, text="Your Time Limits have been successfully set!", font=("Helvetica",15),bg="black",fg="white")
+    l=Label(frame, text="Yay! Your Time Limits have been successfully set!", font=("Helvetica",15),bg="black",fg="green")
     l.pack()
     
     
@@ -39,9 +43,7 @@ label.pack(side="top",fill=X)
 label= Label(frame, text="Your one stop to regulate your social media usage!", font=("Comic Sans MS",15),bg="black",fg="white")
 label.pack(side="top",fill=X)
 
-##filename = PhotoImage(file = "screen-2.gif")
-##background_label = Label(frame, image=filename)
-##background_label.place(x=0, y=0, relwidth=1, relheight=1)
+
 
 label= Label(frame, text="Select Websites you want to monitor your time for:", font=("Comic Sans MS",15),bg="black",fg="white")
 label.pack(side="top",fill=X,pady=10)
@@ -68,7 +70,6 @@ t4 = Entry(frame, width=30,font=("Helvetica",10),borderwidth=4,relief=RIDGE,text
 b= Button(frame,height=1,width=10,text="Submit",fg="green",activebackground="green",command=execute)
 c1.pack(side="top",padx=10,pady=5)
 l.pack()
-print(var1.get())
 t1.pack(pady=5)
 c2.pack(side="top",padx=10,pady=5)
 l1.pack()
