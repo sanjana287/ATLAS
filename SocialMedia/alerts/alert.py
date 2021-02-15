@@ -1,5 +1,3 @@
-import win32gui
-import time
 import smtplib
 import winsound
 from plyer import notification

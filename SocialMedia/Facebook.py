@@ -1,7 +1,6 @@
 import win32gui
 import time
-import smtplib
-import winsound
+from _thread import *
 from plyer import notification
 from .alerts.alert import notif,beep,send
 
@@ -23,9 +22,9 @@ def main(t,mail):
             usage=current-starttime
             if usage>=timelimit or (total+usage)>=timelimit:
                 print("You have used Facebook beyond time limit")
+                start_new_thread(beep,())
+                start_new_thread(notif,())
                 send(mail)
-                beep()
-                notif()
                 break
                 
         elif f==1:
@@ -33,9 +32,9 @@ def main(t,mail):
             total=total+usage
             if total >= timelimit:
                 print("You have used facebook beyond time limit")
+                start_new_thread(beep())
+                start_new_thread(notif())
                 send(mail)
-                beep()
-                notif()
                 break
         print(total,usage)
         time.sleep(1)

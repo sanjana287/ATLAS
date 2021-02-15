@@ -24,8 +24,9 @@ def main(t,mail):
             usage=current-starttime
             if usage>=timelimit or (total+usage)>=timelimit:
                 print("You have used Twitter beyond time limit")
+                start_new_thread(beep,())
+                start_new_thread(notif,())
                 send(mail)
-                beep()
                 break
                 
         elif f==1:
@@ -33,8 +34,9 @@ def main(t,mail):
             total=total+usage
             if total >= timelimit:
                 print("You have used Twitter beyond time limit")
+                start_new_thread(beep,())
+                start_new_thread(notif,())
                 send(mail)
-                beep()
                 break
         print(total,usage)
         time.sleep(1)
