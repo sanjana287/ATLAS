@@ -12,4 +12,6 @@ Application Time Limit Alerting System is a desktop application to regulate your
   - Install all the modules and dependencies mentioned in requirements.txt.
   -  Run the gui.py file to start the application
   
+  #### Demo Image
+  
 ![Demo Image](./image.png)
