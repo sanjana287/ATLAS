@@ -27,7 +27,7 @@ def main(t,mail):
             if usage>=timelimit or (total+usage)>=timelimit:
                 print("You have used Facebook beyond time limit")
                 start_new_thread(beep,())
-                start_new_thread(notif,("Facebook"))
+                start_new_thread(notif,("FACEBOOK",))
                 send(mail)
                 break
                 
@@ -37,7 +37,7 @@ def main(t,mail):
             if total >= timelimit:
                 print("You have used facebook beyond time limit")
                 start_new_thread(beep())
-                start_new_thread(notif,("Facebook"))
+                start_new_thread(notif,("FACEBOOK",))
                 send(mail)
                 break
         print(total,usage)

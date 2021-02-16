@@ -29,7 +29,7 @@ def main(t,mail):
             if usage>=timelimit or (total+usage)>=timelimit:
                 print("You have used Instagram beyond time limit")
                 start_new_thread(beep,())
-                start_new_thread(notif,("Instagram"))
+                start_new_thread(notif,("INSTAGRAM",))
                 send(mail)
                 break
                 
@@ -39,7 +39,7 @@ def main(t,mail):
             if total >= timelimit:
                 print("You have used Instagram beyond time limit")
                 start_new_thread(beep,())
-                start_new_thread(notif,("Instagram"))
+                start_new_thread(notif,("INSTAGRAM",))
                 send(mail)
         print(total,usage)
         time.sleep(1)
