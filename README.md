@@ -9,8 +9,10 @@ Application Time Limit Alerting System is a desktop application to regulate your
   - Alerts sent via email, a desktop notification and a sound alert.
 
 # Requirements
-  - Install all the modules and dependencies mentioned in requirements.txt.
-  -  Run the gui.py file to start the application
+  - Install all the dependencies mentioned in requirements.txt.
+  - In your virtual environment, create a file .venv test file and set the 'email' and 'password' variables 
+  - Enable less security access in your Gmail id that you will be using to send email alerts
+  -  Run the main.py file to start the application
   
   #### Demo Image
   
