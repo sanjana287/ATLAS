@@ -14,4 +14,4 @@ Application Time Limit Alerting System is a desktop application to regulate your
   
   #### Demo Image
   
-![Demo Image](./image.png)
+<img src="image.png" width="450" height="500" />
