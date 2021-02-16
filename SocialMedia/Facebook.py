@@ -12,6 +12,10 @@ def main(t,mail):
     usage=0
     starttime = 0
     while True:
+        x=time.localtime()
+        #setting total=0 if day has changed
+        if x[3]==0 and x[4]==0 and total>0:
+            total=0
         website= win32gui.GetWindowText(win32gui.GetForegroundWindow())
         print(website)
         if "Facebook" in website:
@@ -23,7 +27,7 @@ def main(t,mail):
             if usage>=timelimit or (total+usage)>=timelimit:
                 print("You have used Facebook beyond time limit")
                 start_new_thread(beep,())
-                start_new_thread(notif,())
+                start_new_thread(notif,("Facebook"))
                 send(mail)
                 break
                 
@@ -33,7 +37,7 @@ def main(t,mail):
             if total >= timelimit:
                 print("You have used facebook beyond time limit")
                 start_new_thread(beep())
-                start_new_thread(notif())
+                start_new_thread(notif,("Facebook"))
                 send(mail)
                 break
         print(total,usage)

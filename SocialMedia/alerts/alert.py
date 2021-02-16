@@ -4,7 +4,6 @@ import winsound
 from plyer import notification
 
 
-
 sender = os.getenv('email')
 
 message = """From: ATLAS Alert <sender>
@@ -13,10 +12,10 @@ Subject: Alert- App Used beyond time limit.
 This is an auto-generated alert to notify that you have exceeded your daily app usage time limit.
 """
 
-def notif():
+def notif(s):
     notification.notify( 
-            title = "ALERT!", 
-            message=" DAILY TIME LIMIT OF FACEBOOK USAGE EXCEEDED" , 
+            title = "ALERT!",
+            message= " DAILY TIME LIMIT OF {s} USAGE EXCEEDED".format(s=s) , 
             timeout=2)
   
     
@@ -37,5 +36,3 @@ def send(mail):
     ob.sendmail(sender,receiver,message)
     ob.quit()
     
-
-
