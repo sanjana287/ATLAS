@@ -1,5 +1,7 @@
 from tkinter import *
+from tkinter import messagebox
 from _thread import *
+import time as t
 from SocialMedia.Facebook import main as m1
 from SocialMedia.Instagram import main as m2
 from SocialMedia.Twitter import main as m3
@@ -8,12 +10,9 @@ import os
 
 ## import env variables
 load_dotenv()
-
-
-def execute():
+def execute(): 
     if var1.get()==0 and var2.get()==0 and var3.get()==0:
-        l=Label(frame, text="Nothing has been selected-select atleast one website!", font=("Helvetica",15),bg="black",fg="red")
-        l.pack()
+        messagebox.showwarning("Error", "You have selected nothing-select atleast one website!") 
         return
     email=s4.get()
     if var1.get():
@@ -30,8 +29,7 @@ def execute():
         start_new_thread(m3,(time,email))
     print(var1.get(),var2.get(),var3.get())
     print(s1.get(),s2.get(),s3.get(),s4.get())
-    l=Label(frame, text="Yay! Your Time Limits have been successfully set!", font=("Helvetica",15),bg="black",fg="green")
-    l.pack()
+    messagebox.showinfo("Success", "Yay! Your time limits have been successfully set!") 
     
     
 
@@ -85,5 +83,6 @@ t3.pack(pady=5)
 l3.pack(fill=X,pady=5)
 t4.pack(pady=5)
 b.pack(pady=20)
-
+f=0
+g=0
 root.mainloop()
