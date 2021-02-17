@@ -28,7 +28,7 @@ def main(t,mail):
                 print("You have used Facebook beyond time limit")
                 start_new_thread(beep,())
                 start_new_thread(notif,("FACEBOOK",))
-                send(mail)
+                send(mail,"FACEBOOK")
                 break
                 
         elif f==1:
@@ -38,7 +38,7 @@ def main(t,mail):
                 print("You have used facebook beyond time limit")
                 start_new_thread(beep())
                 start_new_thread(notif,("FACEBOOK",))
-                send(mail)
+                send(mail,"FACEBOOK")
                 break
         print(total,usage)
         time.sleep(1)

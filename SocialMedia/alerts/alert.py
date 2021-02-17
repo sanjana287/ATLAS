@@ -5,11 +5,8 @@ from plyer import notification
 
 
 sender = os.getenv('email')
-appname=""
 
 def notif(s):
-    global appname
-    appname=s
     notification.notify( 
             title = "ALERT!",
             message= " DAILY TIME LIMIT OF {s} USAGE EXCEEDED".format(s=s) , 
@@ -21,7 +18,7 @@ def beep():
     d=2000
     winsound.Beep(f,d)
     
-def send(mail):
+def send(mail,appname):
     message = """From: ATLAS Alert <sender>
 Subject: Alert- App Used beyond time limit.
 This is an auto-generated alert to notify that you have exceeded your daily app usage time limit for {s}.

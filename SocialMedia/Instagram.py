@@ -30,7 +30,7 @@ def main(t,mail):
                 print("You have used Instagram beyond time limit")
                 start_new_thread(beep,())
                 start_new_thread(notif,("INSTAGRAM",))
-                send(mail)
+                send(mail,"INSTAGRAM")
                 break
                 
         elif f==1:
@@ -40,7 +40,7 @@ def main(t,mail):
                 print("You have used Instagram beyond time limit")
                 start_new_thread(beep,())
                 start_new_thread(notif,("INSTAGRAM",))
-                send(mail)
+                send(mail,"INSTAGRAM")
         print(total,usage)
         time.sleep(1)
 

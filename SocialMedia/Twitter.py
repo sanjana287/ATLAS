@@ -31,7 +31,7 @@ def main(t,mail):
                 print("You have used Twitter beyond time limit")
                 start_new_thread(beep,())
                 start_new_thread(notif,("TWITTER",))
-                send(mail)
+                send(mail,"TWITTER")
                 break
                 
         elif f==1:
@@ -41,7 +41,7 @@ def main(t,mail):
                 print("You have used Twitter beyond time limit")
                 start_new_thread(beep,())
                 start_new_thread(notif,("TWITTER",))
-                send(mail)
+                send(mail,"TWITTER")
                 break
         print(total,usage)
         time.sleep(1)
